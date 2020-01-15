@@ -64,11 +64,6 @@ const github = require('@actions/github');
                 release = null;
                 debug(`The existing release was not draft. We can create a brand ✨ new release.`);
             }
-            else {
-                // We cannot update assets on existing releases, so until a future update, we'll ignore updating releases that are published.
-                info(`Draft parameter is set to false and there is an existing release. Skipping any updates to release 🛑.`);
-                return;
-            }
         }
         catch (error) {
             if (error.name != 'HttpError' || error.status != 404) {
