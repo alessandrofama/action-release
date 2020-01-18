@@ -48,7 +48,7 @@ const github = require('@actions/github');
             }
         }
 
-        info(`🎄 <- That is when I wrote this code.`);
+        info(`Running Sondre's Release Script`);
 
         // First let us try to get the release.
         try {
