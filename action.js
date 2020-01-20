@@ -125,7 +125,7 @@ const github = require('@actions/github');
             releaseOptions.release_id = release.id; // Must be part of the parameters.
 
             debug('Release Options (Update)', releaseOptions);
-            info(`Found The 🦞. Updating GitHub release for tag "${tag}".`);
+            info(`🆕 Updating GitHub release for tag "${tag}".`);
 
             const result = await api.repos.updateRelease(releaseOptions);
             release = result.data;
