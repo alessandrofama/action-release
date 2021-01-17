@@ -25,6 +25,8 @@ inputs:
     default: ''
   body:
     default: ''
+  commit:
+    default: ''
 runs:
   using: node12
   main: action.js
