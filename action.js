@@ -21,7 +21,7 @@ const github = require('@actions/github');
         const prerelease = core.getInput('prerelease') == 'true';
         const files = core.getInput('files').split(';');
         
-        const commit = 'master'; // This could likely be a parameter in the future. Get commit like this: github.context.sha
+        const commit = core.getInput('commit'); // This could likely be a parameter in the future. Get commit like this: github.context.sha
         let release = null;
         let created = false; // Indicate if the release was created, or merely updated.
 
